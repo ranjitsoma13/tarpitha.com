@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarpitha — Wisdom to Live Well</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --ink:       #1C2B2B;
+      --parchment: #F0EAD6;
+      --gold:      #B8963E;
+      --sage:      #8FA89A;
+      --cream:     #FAF8F3;
+      --ink-soft:  #3D4F4F;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --ink:       #E8E0CC;
+        --parchment: #1A2525;
+        --gold:      #C9A94F;
+        --sage:      #7A9490;
+        --cream:     #141E1E;
+        --ink-soft:  #B0C0BC;
+      }
+    }
+
+    :root[data-theme="dark"] {
+      --ink:       #E8E0CC;
+      --parchment: #1A2525;
+      --gold:      #C9A94F;
+      --sage:      #7A9490;
+      --cream:     #141E1E;
+      --ink-soft:  #B0C0BC;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { font-size: 18px; scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--cream);
+      color: var(--ink);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 300;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .fade-in {
+        opacity: 0;
+        transform: translateY(16px);
+        animation: rise 1.2s ease forwards;
+      }
+      .fade-in:nth-child(2) { animation-delay: 0.2s; }
+      .fade-in:nth-child(3) { animation-delay: 0.4s; }
+      .fade-in:nth-child(4) { animation-delay: 0.6s; }
+
+      @keyframes rise {
+        to { opacity: 1; transform: translateY(0); }
+      }
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.4rem 2.5rem;
+      background: var(--cream);
+      border-bottom: 1px solid color-mix(in srgb, var(--sage) 30%, transparent);
+    }
+
+    .nav-wordmark {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--ink-soft);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+
+    /* ── Hero ── */
+    .hero {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8rem 2.5rem 5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: var(--sage);
+      letter-spacing: 0.12em;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-quote {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2.4rem, 6vw, 4.6rem);
+      font-weight: 300;
+      line-height: 1.18;
+      color: var(--ink);
+      max-width: 16ch;
+    }
+
+    .hero-quote em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-sub {
+      margin-top: 2.5rem;
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+      max-width: 50ch;
+      line-height: 1.85;
+    }
+
+    .hero-cta {
+      margin-top: 3rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .hero-cta:hover { color: var(--gold); }
+
+    .hero-ornament {
+      margin-top: 5rem;
+      width: 48px;
+      height: 1px;
+      background: var(--sage);
+    }
+
+    /* ── Pillars ── */
+    .pillars {
+      background: var(--parchment);
+      padding: 7rem 2.5rem;
+    }
+
+    .pillars-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.78rem;
+      color: var(--sage);
+      letter-spacing: 0.14em;
+      margin-bottom: 3.5rem;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 3rem 4rem;
+    }
+
+    .pillar-glyph {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.4rem;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 1.2rem;
+    }
+
+    .pillar-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+
+    .pillar-body {
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+      line-height: 1.85;
+    }
+
+    /* ── Lesson feature ── */
+    .lesson-feature {
+      padding: 8rem 2.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .lesson-pull {
+      border-left: 2px solid var(--gold);
+      padding-left: 2rem;
+      margin: 3rem 0;
+    }
+
+    .lesson-pull blockquote {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.45;
+      color: var(--ink);
+    }
+
+    .lesson-pull cite {
+      display: block;
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      font-style: normal;
+      color: var(--sage);
+      letter-spacing: 0.06em;
+    }
+
+    .lesson-body {
+      font-size: 1rem;
+      color: var(--ink-soft);
+      max-width: 58ch;
+      line-height: 1.9;
+    }
+
+    .lesson-body + .lesson-body { margin-top: 1.4rem; }
+
+    /* ── Themes ── */
+    .themes {
+      background: var(--parchment);
+      padding: 7rem 2.5rem;
+    }
+
+    .themes-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .themes-list {
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .theme-row {
+      display: flex;
+      align-items: baseline;
+      gap: 1.5rem;
+      padding: 1.4rem 0;
+      border-top: 1px solid color-mix(in srgb, var(--sage) 25%, transparent);
+    }
+
+    .theme-row:last-child {
+      border-bottom: 1px solid color-mix(in srgb, var(--sage) 25%, transparent);
+    }
+
+    .theme-num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 0.85rem;
+      color: var(--sage);
+      min-width: 2.5rem;
+      font-weight: 300;
+    }
+
+    .theme-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 500;
+      color: var(--ink);
+      min-width: 180px;
+    }
+
+    .theme-desc {
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+      line-height: 1.7;
+    }
+
+    /* ── Newsletter ── */
+    .newsletter {
+      padding: 8rem 2.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .newsletter-heading {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 300;
+      line-height: 1.3;
+      max-width: 20ch;
+      margin-bottom: 1.5rem;
+    }
+
+    .newsletter-sub {
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+      max-width: 48ch;
+      margin-bottom: 2.5rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: stretch;
+    }
+
+    .newsletter-input {
+      flex: 1 1 260px;
+      background: transparent;
+      border: 1px solid color-mix(in srgb, var(--sage) 50%, transparent);
+      padding: 0.85rem 1.2rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.9rem;
+      color: var(--ink);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .newsletter-input::placeholder { color: var(--sage); }
+    .newsletter-input:focus { border-color: var(--gold); }
+
+    .newsletter-btn {
+      background: var(--ink);
+      color: var(--cream);
+      border: none;
+      padding: 0.85rem 2rem;
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .newsletter-btn:hover { background: var(--gold); }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid color-mix(in srgb, var(--sage) 25%, transparent);
+      padding: 2.5rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-wordmark {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: var(--ink);
+    }
+
+    .footer-note {
+      font-size: 0.78rem;
+      color: var(--sage);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .nav-links { gap: 1.2rem; }
+      .hero, .lesson-feature, .newsletter { padding-left: 1.5rem; padding-right: 1.5rem; }
+      .pillars, .themes { padding-left: 1.5rem; padding-right: 1.5rem; }
+      footer { padding: 2rem 1.5rem; }
+      .theme-row { flex-direction: column; gap: 0.4rem; }
+      .newsletter-form { flex-direction: column; }
+      .newsletter-btn { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-wordmark" href="#">Tarpitha</a>
+    <ul class="nav-links">
+      <li><a href="#wisdom">Wisdom</a></li>
+      <li><a href="#themes">Themes</a></li>
+      <li><a href="#newsletter">Letters</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <p class="hero-eyebrow fade-in">Wisdom to live well</p>
+    <h1 class="hero-quote fade-in">
+      A well-lived life is<br><em>built slowly,</em><br>one true thing at a time.
+    </h1>
+    <p class="hero-sub fade-in">
+      Tarpitha gathers the lessons that endure — drawn from philosophy, story, and the quiet observations of an examined life.
+    </p>
+    <a href="#wisdom" class="hero-cta fade-in">Begin reading</a>
+    <div class="hero-ornament"></div>
+  </section>
+
+  <!-- Pillars -->
+  <section class="pillars" id="wisdom">
+    <div class="pillars-inner">
+      <p class="section-label">What Tarpitha offers</p>
+      <div class="pillars-grid">
+        <div class="pillar">
+          <div class="pillar-glyph">॥</div>
+          <h3 class="pillar-title">Timeless lessons</h3>
+          <p class="pillar-body">Wisdom that has proven itself across centuries — not trending advice, but ideas tested by time and human experience.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-glyph">⌁</div>
+          <h3 class="pillar-title">Examined living</h3>
+          <p class="pillar-body">Practical insight for the choices that matter: how we spend attention, build relationships, and find meaning in the everyday.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-glyph">◦</div>
+          <h3 class="pillar-title">Honest reflection</h3>
+          <p class="pillar-body">No formulas, no guarantees. Just clear-eyed observation from traditions and thinkers who wrestled honestly with what it means to live well.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lesson feature -->
+  <section class="lesson-feature">
+    <p class="section-label">A lesson from Tarpitha</p>
+
+    <div class="lesson-pull">
+      <blockquote>
+        "The obstacle is not in your way. The obstacle is the way."
+      </blockquote>
+      <cite>— Marcus Aurelius, Meditations</cite>
+    </div>
+
+    <p class="lesson-body">
+      Stoic philosophy offers one of its most useful teachings here: resistance is not something to eliminate before life can begin. Difficulty, setback, and discomfort are precisely where character is formed. The person who waits for smooth conditions waits forever.
+    </p>
+    <p class="lesson-body">
+      This lesson does not counsel passivity. It inverts the ordinary relationship to hardship — from something that stands between us and our goals, to the very material from which progress is made.
+    </p>
+  </section>
+
+  <!-- Themes -->
+  <section class="themes" id="themes">
+    <div class="themes-inner">
+      <p class="section-label">Themes</p>
+      <div class="themes-list">
+        <div class="theme-row">
+          <span class="theme-num">i</span>
+          <span class="theme-name">Equanimity</span>
+          <span class="theme-desc">The art of remaining steady in pleasure and adversity alike.</span>
+        </div>
+        <div class="theme-row">
+          <span class="theme-num">ii</span>
+          <span class="theme-name">Attention</span>
+          <span class="theme-desc">What we give our focus to becomes our life. Choosing wisely is the beginning of everything.</span>
+        </div>
+        <div class="theme-row">
+          <span class="theme-num">iii</span>
+          <span class="theme-name">Belonging</span>
+          <span class="theme-desc">The ties that hold us — to people, to place, to purpose — and how to tend them.</span>
+        </div>
+        <div class="theme-row">
+          <span class="theme-num">iv</span>
+          <span class="theme-name">Impermanence</span>
+          <span class="theme-desc">How accepting the transient nature of things opens us to a fuller experience of them.</span>
+        </div>
+        <div class="theme-row">
+          <span class="theme-num">v</span>
+          <span class="theme-name">Character</span>
+          <span class="theme-desc">Not talent, not circumstance — but the habits and values built slowly over a lifetime.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter" id="newsletter">
+    <h2 class="newsletter-heading">One lesson, once a week.</h2>
+    <p class="newsletter-sub">
+      A short letter in your inbox — one idea worth sitting with, drawn from Tarpitha's ongoing collection of life's most enduring lessons.
+    </p>
+    <div class="newsletter-form">
+      <input class="newsletter-input" type="email" placeholder="Your email address" aria-label="Email address" />
+      <button class="newsletter-btn" type="button">Subscribe</button>
+    </div>
+  </section>
+
+  <footer>
+    <span class="footer-wordmark">Tarpitha</span>
+    <span class="footer-note">Wisdom to live well</span>
+  </footer>
+
+</body>
+</html>
