@@ -17,31 +17,18 @@
       --cream:     #FAF8F3;
       --ink-soft:  #3D4F4F;
     }
-
     @media (prefers-color-scheme: dark) {
       :root:not([data-theme="light"]) {
-        --ink:       #E8E0CC;
-        --parchment: #1A2525;
-        --gold:      #C9A94F;
-        --sage:      #7A9490;
-        --cream:     #141E1E;
-        --ink-soft:  #B0C0BC;
+        --ink: #E8E0CC; --parchment: #1A2525; --gold: #C9A94F;
+        --sage: #7A9490; --cream: #141E1E; --ink-soft: #B0C0BC;
       }
     }
-
     :root[data-theme="dark"] {
-      --ink:       #E8E0CC;
-      --parchment: #1A2525;
-      --gold:      #C9A94F;
-      --sage:      #7A9490;
-      --cream:     #141E1E;
-      --ink-soft:  #B0C0BC;
+      --ink: #E8E0CC; --parchment: #1A2525; --gold: #C9A94F;
+      --sage: #7A9490; --cream: #141E1E; --ink-soft: #B0C0BC;
     }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { font-size: 18px; scroll-behavior: smooth; }
-
     body {
       background-color: var(--cream);
       color: var(--ink);
@@ -50,361 +37,232 @@
       line-height: 1.75;
       -webkit-font-smoothing: antialiased;
     }
-
     @media (prefers-reduced-motion: no-preference) {
-      .fade-in {
-        opacity: 0;
-        transform: translateY(16px);
-        animation: rise 1.2s ease forwards;
-      }
+      .fade-in { opacity: 0; transform: translateY(16px); animation: rise 1.2s ease forwards; }
       .fade-in:nth-child(2) { animation-delay: 0.2s; }
       .fade-in:nth-child(3) { animation-delay: 0.4s; }
       .fade-in:nth-child(4) { animation-delay: 0.6s; }
-
-      @keyframes rise {
-        to { opacity: 1; transform: translateY(0); }
-      }
+      @keyframes rise { to { opacity: 1; transform: translateY(0); } }
     }
 
-    /* ── Nav ── */
+    /* Nav */
     nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
       padding: 1.4rem 2.5rem;
       background: var(--cream);
       border-bottom: 1px solid color-mix(in srgb, var(--sage) 30%, transparent);
     }
-
     .nav-wordmark {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.3rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      color: var(--ink);
-      text-decoration: none;
+      font-size: 1.3rem; font-weight: 500; letter-spacing: 0.08em;
+      color: var(--ink); text-decoration: none;
     }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a {
       font-family: 'Source Serif 4', Georgia, serif;
-      font-size: 0.85rem;
-      font-weight: 300;
-      color: var(--ink-soft);
-      text-decoration: none;
-      letter-spacing: 0.03em;
-      transition: color 0.2s;
+      font-size: 0.85rem; font-weight: 300; color: var(--ink-soft);
+      text-decoration: none; letter-spacing: 0.03em; transition: color 0.2s;
     }
-
     .nav-links a:hover { color: var(--gold); }
 
-    /* ── Hero ── */
+    /* Hero */
     .hero {
-      min-height: 100svh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 8rem 2.5rem 5rem;
-      max-width: 900px;
-      margin: 0 auto;
+      min-height: 100svh; display: flex; flex-direction: column;
+      justify-content: center; padding: 8rem 2.5rem 5rem;
+      max-width: 900px; margin: 0 auto;
     }
-
     .hero-eyebrow {
-      font-family: 'Source Serif 4', Georgia, serif;
-      font-size: 0.8rem;
-      font-weight: 300;
-      color: var(--sage);
-      letter-spacing: 0.12em;
-      margin-bottom: 2.5rem;
+      font-size: 0.8rem; font-weight: 300; color: var(--sage);
+      letter-spacing: 0.12em; margin-bottom: 2.5rem;
     }
-
     .hero-quote {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(2.4rem, 6vw, 4.6rem);
-      font-weight: 300;
-      line-height: 1.18;
-      color: var(--ink);
-      max-width: 16ch;
+      font-size: clamp(2.4rem, 6vw, 4.6rem); font-weight: 300;
+      line-height: 1.18; color: var(--ink); max-width: 16ch;
     }
-
-    .hero-quote em {
-      font-style: italic;
-      color: var(--gold);
-    }
-
+    .hero-quote em { font-style: italic; color: var(--gold); }
     .hero-sub {
-      margin-top: 2.5rem;
-      font-size: 1.05rem;
-      color: var(--ink-soft);
-      max-width: 50ch;
-      line-height: 1.85;
+      margin-top: 2.5rem; font-size: 1.05rem; color: var(--ink-soft);
+      max-width: 50ch; line-height: 1.85;
     }
-
     .hero-cta {
-      margin-top: 3rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-family: 'Source Serif 4', Georgia, serif;
-      font-size: 0.9rem;
-      font-weight: 400;
-      color: var(--ink);
-      text-decoration: none;
-      border-bottom: 1px solid var(--gold);
-      padding-bottom: 2px;
-      transition: color 0.2s, border-color 0.2s;
+      margin-top: 3rem; display: inline-flex; align-items: center;
+      gap: 0.6rem; font-size: 0.9rem; font-weight: 400; color: var(--ink);
+      text-decoration: none; border-bottom: 1px solid var(--gold);
+      padding-bottom: 2px; transition: color 0.2s;
     }
-
     .hero-cta:hover { color: var(--gold); }
+    .hero-ornament { margin-top: 5rem; width: 48px; height: 1px; background: var(--sage); }
 
-    .hero-ornament {
-      margin-top: 5rem;
-      width: 48px;
-      height: 1px;
-      background: var(--sage);
-    }
-
-    /* ── Pillars ── */
-    .pillars {
-      background: var(--parchment);
-      padding: 7rem 2.5rem;
-    }
-
-    .pillars-inner {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
+    /* Pillars */
+    .pillars { background: var(--parchment); padding: 7rem 2.5rem; }
+    .pillars-inner { max-width: 900px; margin: 0 auto; }
     .section-label {
-      font-size: 0.78rem;
-      color: var(--sage);
-      letter-spacing: 0.14em;
-      margin-bottom: 3.5rem;
+      font-size: 0.78rem; color: var(--sage);
+      letter-spacing: 0.14em; margin-bottom: 3.5rem;
     }
-
     .pillars-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 3rem 4rem;
     }
-
     .pillar-glyph {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 2.4rem;
-      font-weight: 300;
-      color: var(--gold);
-      line-height: 1;
-      margin-bottom: 1.2rem;
+      font-size: 2.4rem; font-weight: 300; color: var(--gold);
+      line-height: 1; margin-bottom: 1.2rem;
     }
-
     .pillar-title {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.4rem;
-      font-weight: 500;
-      color: var(--ink);
-      margin-bottom: 0.75rem;
+      font-size: 1.4rem; font-weight: 500; color: var(--ink); margin-bottom: 0.75rem;
     }
+    .pillar-body { font-size: 0.9rem; color: var(--ink-soft); line-height: 1.85; }
 
-    .pillar-body {
-      font-size: 0.9rem;
-      color: var(--ink-soft);
-      line-height: 1.85;
+    /* Lesson */
+    .lesson-feature { padding: 8rem 2.5rem; max-width: 900px; margin: 0 auto; }
+    .lesson-meta {
+      font-size: 0.78rem; color: var(--sage); letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
     }
-
-    /* ── Lesson feature ── */
-    .lesson-feature {
-      padding: 8rem 2.5rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .lesson-pull {
-      border-left: 2px solid var(--gold);
-      padding-left: 2rem;
-      margin: 3rem 0;
-    }
-
+    .lesson-pull { border-left: 2px solid var(--gold); padding-left: 2rem; margin: 2.5rem 0; }
     .lesson-pull blockquote {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.5rem, 3vw, 2.1rem);
-      font-weight: 300;
-      font-style: italic;
-      line-height: 1.45;
-      color: var(--ink);
+      font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 300;
+      font-style: italic; line-height: 1.45; color: var(--ink);
     }
-
-    .lesson-pull cite {
-      display: block;
-      margin-top: 1rem;
-      font-size: 0.8rem;
-      font-style: normal;
-      color: var(--sage);
-      letter-spacing: 0.06em;
-    }
-
-    .lesson-body {
-      font-size: 1rem;
-      color: var(--ink-soft);
-      max-width: 58ch;
-      line-height: 1.9;
-    }
-
+    .lesson-body { font-size: 1rem; color: var(--ink-soft); max-width: 58ch; line-height: 1.9; }
     .lesson-body + .lesson-body { margin-top: 1.4rem; }
+    .lesson-loading { color: var(--sage); font-size: 0.9rem; font-style: italic; }
 
-    /* ── Themes ── */
-    .themes {
-      background: var(--parchment);
-      padding: 7rem 2.5rem;
+    /* Archive */
+    .archive { background: var(--parchment); padding: 7rem 2.5rem; }
+    .archive-inner { max-width: 900px; margin: 0 auto; }
+    .archive-list { display: flex; flex-direction: column; }
+    .archive-row {
+      display: flex; align-items: baseline; gap: 1.5rem;
+      padding: 1.4rem 0;
+      border-top: 1px solid color-mix(in srgb, var(--sage) 25%, transparent);
+      cursor: pointer; transition: color 0.2s;
     }
-
-    .themes-inner {
-      max-width: 900px;
-      margin: 0 auto;
+    .archive-row:last-child {
+      border-bottom: 1px solid color-mix(in srgb, var(--sage) 25%, transparent);
     }
-
-    .themes-list {
-      margin-top: 3rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
+    .archive-row:hover .archive-title { color: var(--gold); }
+    .archive-num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 0.85rem; color: var(--sage); min-width: 2.5rem; font-weight: 300;
     }
+    .archive-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.2rem; font-weight: 500; color: var(--ink); flex: 1;
+      transition: color 0.2s;
+    }
+    .archive-theme {
+      font-size: 0.75rem; color: var(--sage); letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+    .archive-empty { font-size: 0.9rem; color: var(--sage); font-style: italic; }
 
+    /* Modal */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0; z-index: 200;
+      background: color-mix(in srgb, var(--ink) 70%, transparent);
+      align-items: center; justify-content: center; padding: 2rem;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--cream); max-width: 640px; width: 100%;
+      max-height: 85vh; overflow-y: auto;
+      padding: 3rem; position: relative;
+    }
+    .modal-close {
+      position: absolute; top: 1.2rem; right: 1.5rem;
+      background: none; border: none; font-size: 1.5rem;
+      color: var(--sage); cursor: pointer; line-height: 1;
+    }
+    .modal-close:hover { color: var(--ink); }
+    .modal-theme {
+      font-size: 0.75rem; color: var(--sage); letter-spacing: 0.12em; margin-bottom: 1rem;
+    }
+    .modal-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 400;
+      font-style: italic; color: var(--ink); line-height: 1.35; margin-bottom: 2rem;
+    }
+    .modal-body { font-size: 0.95rem; color: var(--ink-soft); line-height: 1.9; }
+    .modal-body p + p { margin-top: 1.2rem; }
+
+    /* Themes */
+    .themes { padding: 7rem 2.5rem; }
+    .themes-inner { max-width: 900px; margin: 0 auto; }
+    .themes-list { margin-top: 3rem; display: flex; flex-direction: column; }
     .theme-row {
-      display: flex;
-      align-items: baseline;
-      gap: 1.5rem;
+      display: flex; align-items: baseline; gap: 1.5rem;
       padding: 1.4rem 0;
       border-top: 1px solid color-mix(in srgb, var(--sage) 25%, transparent);
     }
-
     .theme-row:last-child {
       border-bottom: 1px solid color-mix(in srgb, var(--sage) 25%, transparent);
     }
-
     .theme-num {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 0.85rem;
-      color: var(--sage);
-      min-width: 2.5rem;
-      font-weight: 300;
+      font-size: 0.85rem; color: var(--sage); min-width: 2.5rem; font-weight: 300;
     }
-
     .theme-name {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.35rem;
-      font-weight: 500;
-      color: var(--ink);
-      min-width: 180px;
+      font-size: 1.35rem; font-weight: 500; color: var(--ink); min-width: 180px;
     }
+    .theme-desc { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.7; }
 
-    .theme-desc {
-      font-size: 0.88rem;
-      color: var(--ink-soft);
-      line-height: 1.7;
-    }
-
-    /* ── Newsletter ── */
-    .newsletter {
-      padding: 8rem 2.5rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
+    /* Newsletter */
+    .newsletter { padding: 8rem 2.5rem; max-width: 900px; margin: 0 auto; }
     .newsletter-heading {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 300;
-      line-height: 1.3;
-      max-width: 20ch;
-      margin-bottom: 1.5rem;
+      font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 300;
+      line-height: 1.3; max-width: 20ch; margin-bottom: 1.5rem;
     }
-
-    .newsletter-sub {
-      font-size: 0.95rem;
-      color: var(--ink-soft);
-      max-width: 48ch;
-      margin-bottom: 2.5rem;
-    }
-
-    .newsletter-form {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      align-items: stretch;
-    }
-
+    .newsletter-sub { font-size: 0.95rem; color: var(--ink-soft); max-width: 48ch; margin-bottom: 2.5rem; }
+    .newsletter-form { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: stretch; }
     .newsletter-input {
-      flex: 1 1 260px;
-      background: transparent;
+      flex: 1 1 260px; background: transparent;
       border: 1px solid color-mix(in srgb, var(--sage) 50%, transparent);
       padding: 0.85rem 1.2rem;
       font-family: 'Source Serif 4', Georgia, serif;
-      font-size: 0.9rem;
-      color: var(--ink);
-      outline: none;
-      transition: border-color 0.2s;
+      font-size: 0.9rem; color: var(--ink); outline: none; transition: border-color 0.2s;
     }
-
     .newsletter-input::placeholder { color: var(--sage); }
     .newsletter-input:focus { border-color: var(--gold); }
-
     .newsletter-btn {
-      background: var(--ink);
-      color: var(--cream);
-      border: none;
+      background: var(--ink); color: var(--cream); border: none;
       padding: 0.85rem 2rem;
       font-family: 'Source Serif 4', Georgia, serif;
-      font-size: 0.9rem;
-      font-weight: 400;
-      letter-spacing: 0.04em;
-      cursor: pointer;
-      transition: background 0.2s;
+      font-size: 0.9rem; font-weight: 400; letter-spacing: 0.04em;
+      cursor: pointer; transition: background 0.2s;
     }
-
     .newsletter-btn:hover { background: var(--gold); }
 
-    /* ── Footer ── */
+    /* Footer */
     footer {
       border-top: 1px solid color-mix(in srgb, var(--sage) 25%, transparent);
-      padding: 2.5rem 2.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
+      padding: 2.5rem; display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 1rem;
     }
-
     .footer-wordmark {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.1rem;
-      font-weight: 400;
-      letter-spacing: 0.08em;
-      color: var(--ink);
+      font-size: 1.1rem; font-weight: 400; letter-spacing: 0.08em; color: var(--ink);
     }
+    .footer-note { font-size: 0.78rem; color: var(--sage); }
 
-    .footer-note {
-      font-size: 0.78rem;
-      color: var(--sage);
-    }
-
-    /* ── Responsive ── */
+    /* Responsive */
     @media (max-width: 600px) {
       nav { padding: 1.2rem 1.5rem; }
       .nav-links { gap: 1.2rem; }
       .hero, .lesson-feature, .newsletter { padding-left: 1.5rem; padding-right: 1.5rem; }
-      .pillars, .themes { padding-left: 1.5rem; padding-right: 1.5rem; }
+      .pillars, .themes, .archive { padding-left: 1.5rem; padding-right: 1.5rem; }
       footer { padding: 2rem 1.5rem; }
-      .theme-row { flex-direction: column; gap: 0.4rem; }
+      .theme-row, .archive-row { flex-direction: column; gap: 0.4rem; }
       .newsletter-form { flex-direction: column; }
       .newsletter-btn { width: 100%; text-align: center; }
+      .modal { padding: 2rem 1.5rem; }
     }
   </style>
 </head>
@@ -414,7 +272,7 @@
     <a class="nav-wordmark" href="#">Tarpitha</a>
     <ul class="nav-links">
       <li><a href="#wisdom">Wisdom</a></li>
-      <li><a href="#themes">Themes</a></li>
+      <li><a href="#archive">Archive</a></li>
       <li><a href="#newsletter">Letters</a></li>
     </ul>
   </nav>
@@ -428,7 +286,7 @@
     <p class="hero-sub fade-in">
       Tarpitha gathers the lessons that endure — drawn from philosophy, story, and the quiet observations of an examined life.
     </p>
-    <a href="#wisdom" class="hero-cta fade-in">Begin reading</a>
+    <a href="#lesson" class="hero-cta fade-in">Read this week's lesson</a>
     <div class="hero-ornament"></div>
   </section>
 
@@ -456,23 +314,18 @@
     </div>
   </section>
 
-  <!-- Lesson feature -->
-  <section class="lesson-feature">
-    <p class="section-label">A lesson from Tarpitha</p>
+  <!-- Latest Lesson (dynamic) -->
+  <section class="lesson-feature" id="lesson">
+    <p class="section-label">This week's lesson</p>
+    <div id="lesson-content"><p class="lesson-loading">Loading…</p></div>
+  </section>
 
-    <div class="lesson-pull">
-      <blockquote>
-        "The obstacle is not in your way. The obstacle is the way."
-      </blockquote>
-      <cite>— Marcus Aurelius, Meditations</cite>
+  <!-- Archive (dynamic) -->
+  <section class="archive" id="archive">
+    <div class="archive-inner">
+      <p class="section-label">All lessons</p>
+      <div id="archive-list" class="archive-list"></div>
     </div>
-
-    <p class="lesson-body">
-      Stoic philosophy offers one of its most useful teachings here: resistance is not something to eliminate before life can begin. Difficulty, setback, and discomfort are precisely where character is formed. The person who waits for smooth conditions waits forever.
-    </p>
-    <p class="lesson-body">
-      This lesson does not counsel passivity. It inverts the ordinary relationship to hardship — from something that stands between us and our goals, to the very material from which progress is made.
-    </p>
   </section>
 
   <!-- Themes -->
@@ -526,5 +379,97 @@
     <span class="footer-note">Wisdom to live well</span>
   </footer>
 
+  <!-- Lesson modal -->
+  <div class="modal-overlay" id="modal" role="dialog" aria-modal="true">
+    <div class="modal">
+      <button class="modal-close" id="modal-close" aria-label="Close">×</button>
+      <p class="modal-theme" id="modal-theme"></p>
+      <h2 class="modal-title" id="modal-title"></h2>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <script>
+    // Load lessons from lessons.json
+    async function loadLessons() {
+      try {
+        const res = await fetch('lessons.json?v=' + Date.now());
+        const lessons = await res.json();
+
+        // Sort by date descending (newest first)
+        lessons.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        renderLatest(lessons[0]);
+        renderArchive(lessons);
+      } catch (e) {
+        document.getElementById('lesson-content').innerHTML =
+          '<p class="lesson-loading">Lessons coming soon.</p>';
+      }
+    }
+
+    function formatDate(dateStr) {
+      const d = new Date(dateStr + 'T00:00:00');
+      return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+    }
+
+    function renderLatest(lesson) {
+      const el = document.getElementById('lesson-content');
+      const paragraphs = lesson.body.split('\n\n')
+        .map(p => `<p class="lesson-body">${p.trim()}</p>`)
+        .join('');
+      el.innerHTML = `
+        <p class="lesson-meta">${lesson.theme} &nbsp;·&nbsp; ${formatDate(lesson.date)}</p>
+        <div class="lesson-pull">
+          <blockquote>${lesson.title}</blockquote>
+        </div>
+        ${paragraphs}
+      `;
+    }
+
+    function renderArchive(lessons) {
+      const el = document.getElementById('archive-list');
+      if (lessons.length <= 1) {
+        el.innerHTML = '<p class="archive-empty">More lessons coming soon.</p>';
+        return;
+      }
+      // Show all except the first (latest already featured above)
+      el.innerHTML = lessons.slice(1).map((l, i) => `
+        <div class="archive-row" data-id="${l.id}" tabindex="0" role="button" aria-label="Read lesson: ${l.title}">
+          <span class="archive-num">${String(lessons.length - 1 - i).padStart(2, '0')}</span>
+          <span class="archive-title">${l.title}</span>
+          <span class="archive-theme">${l.theme}</span>
+        </div>
+      `).join('');
+
+      // Click to open modal
+      el.querySelectorAll('.archive-row').forEach(row => {
+        const open = () => openModal(lessons.find(l => l.id == row.dataset.id));
+        row.addEventListener('click', open);
+        row.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') open(); });
+      });
+    }
+
+    function openModal(lesson) {
+      document.getElementById('modal-theme').textContent = lesson.theme + ' · ' + formatDate(lesson.date);
+      document.getElementById('modal-title').textContent = lesson.title;
+      document.getElementById('modal-body').innerHTML = lesson.body.split('\n\n')
+        .map(p => `<p>${p.trim()}</p>`).join('');
+      document.getElementById('modal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('modal-close').addEventListener('click', closeModal);
+    document.getElementById('modal').addEventListener('click', e => {
+      if (e.target === e.currentTarget) closeModal();
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    loadLessons();
+  </script>
 </body>
 </html>
