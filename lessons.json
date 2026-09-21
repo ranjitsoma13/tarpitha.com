@@ -1,18 +1,58 @@
 [
   {
+    "id": 7,
+    "date": "2026-10-31",
+    "theme": "Belonging",
+    "title": "Life is beautiful when attached to nothing, connected to everything.",
+    "image": "https://images.unsplash.com/photo-1476611338391-6f395a0ebc7b?w=1200&q=80&auto=format&fit=crop",
+    "body": "Attached to nothing means not becoming overly dependent on people, possessions, status, expectations, or outcomes. It is about inner freedom — loving without trying to possess or control.\n\nConnected to everything means recognising that we are part of a larger whole — other people, nature, society, and life itself. It encourages compassion, empathy, and a sense of oneness.\n\nThe two ideas together form a way of being that is both free and full. We stop clinging to what we fear losing, and in doing so, we find ourselves genuinely present to all that surrounds us. The tighter we hold, the less we feel. The more we release, the more we receive."
+  },
+  {
+    "id": 6,
+    "date": "2026-10-24",
+    "theme": "Equanimity",
+    "title": "A gentle heart often understands more than loud voices.",
+    "image": "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1200&q=80&auto=format&fit=crop",
+    "body": "Quietness perceives what noise cannot. Those who listen with softness and humility often grasp the unspoken — the pain behind words, the need beneath demands — while those who dominate with volume remain blind to it.\n\nLoudness asserts; gentleness receives. A bell is silent until touched, yet when it rings — even gently — it is heard clearly across a room. The quiet person in the corner often holds the fullest picture of what is happening around them.\n\nThis is not weakness. It is a refined form of attention. The gentle heart does not rush to speak; it waits to truly understand. And in that understanding, it often finds what the loudest voices in the room entirely missed."
+  },
+  {
+    "id": 5,
+    "date": "2026-10-17",
+    "theme": "Character",
+    "title": "Don't sacrifice your progress for anyone — they might not do the same if the tables were turned.",
+    "image": "https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=1200&q=80&auto=format&fit=crop",
+    "body": "Protect your own growth and journey. Do not halt your progress simply to please others or to avoid the discomfort of standing apart. Many people will accept your sacrifice without fully recognising its cost — and when roles are reversed, the same support may not be returned.\n\nThis is not a counsel of selfishness. It is a counsel of wisdom. True generosity does not require you to diminish yourself. You can help without losing your path. You can care without abandoning your purpose.\n\nThe Bhagavad Gita puts it plainly: do your duty without surrendering your dharma. Your growth is not a luxury — it is your responsibility, both to yourself and to the world you are here to serve."
+  },
+  {
+    "id": 4,
+    "date": "2026-10-10",
+    "theme": "Equanimity",
+    "title": "Don't let others' negativity affect your peace of mind.",
+    "image": "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=1200&q=80&auto=format&fit=crop",
+    "body": "Picture a woman standing at the centre of a crowd — dark silhouettes pressing in from the left, faces tight with judgment, voices sharp with criticism. Yet she turns away. Eyes closed. A quiet smile on her face. From her flow colourful butterflies, rising freely into the air around her.\n\nThis is not indifference. It is a choice — one of the most powerful choices available to us. Other people's negativity is real, but it only takes root inside us when we allow it to. The moment we stop feeding it our attention, it loses its power.\n\nYour happiness is not determined by what others send your way. It is determined by what you choose to let in. Guard that gate. The butterflies on the other side are worth it."
+  },
+  {
+    "id": 3,
+    "date": "2026-10-03",
+    "theme": "Attention",
+    "title": "Never go back to the place where you lost your smile.",
+    "image": "https://images.unsplash.com/photo-1506252374453-ef5237291d83?w=1200&q=80&auto=format&fit=crop",
+    "body": "Some places, people, and situations have a way of quietly taking something from us — our joy, our confidence, our sense of self. When we return to them, hoping things will be different, we often find the same environment waiting to do the same thing again.\n\nThis is not about running from difficulty. It is about recognising the difference between a challenge that grows you and a situation that diminishes you. The first is worth returning to. The second is not.\n\nMove forward. Seek new spaces and people that nurture peace, growth, and happiness. The smile you protect today is the foundation of who you are becoming. Do not leave it behind in places that were never worthy of it."
+  },
+  {
     "id": 2,
     "date": "2026-09-26",
-    "theme": "Equanimity",
-    "title": "Whenever you get angry, you lose something of your own — be it wisdom, time, or peace.",
-    "image": "https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=1200&q=80&auto=format&fit=crop",
-    "body": "Anger always takes more from us than it gives. The moment we let it take hold, something quietly slips away — our clarity, our composure, a moment we cannot get back.\n\nEach time we lose our temper, we hand over control to something outside ourselves. The words said in anger, the decisions made in haste, the relationships strained by a flare of emotion — these are the real costs, often invisible until long after the anger has passed.\n\nTrue strength is not the ability to express anger loudly. It is the ability to hold your peace when everything around you pushes you to lose it. That composure — earned slowly, tested often — is one of the most valuable things you own. Guard it well."
+    "theme": "Character",
+    "title": "Dreams are the touchstones of our character.",
+    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=80&auto=format&fit=crop",
+    "body": "A touchstone is the ancient test for the purity of gold — press the metal against it and the truth is revealed. Our dreams work the same way. They show us, without flattery or pretence, what we truly value and who we are striving to become.\n\nIf your dreams are noble, generous, and aimed at something beyond yourself, they reflect a character growing in the right direction. If they are small, fearful, or built entirely around comfort and approval, they point to the work still to be done within.\n\nThis is not a judgement — it is an invitation. Pay attention to what you dream about when no one is watching and nothing is at stake. That is where your real character lives. And it is always possible to refine it."
   },
   {
     "id": 1,
     "date": "2026-09-19",
     "theme": "Equanimity",
-    "title": "Don't let others' negativity affect your peace of mind.",
-    "image": "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=1200&q=80&auto=format&fit=crop",
-    "body": "Picture a woman standing at the centre of a crowd — dark silhouettes pressing in from the left, faces tight with judgment, voices sharp with criticism. Yet she turns away. Eyes closed. A quiet smile on her face. From her flow colourful butterflies, rising freely into the air around her.\n\nThis is not indifference. It is a choice — one of the most powerful choices available to us. Other people's negativity is real, but it only takes root inside us when we allow it to. The moment we stop feeding it our attention, it loses its power.\n\nYour happiness is not determined by what others send your way. It is determined by what you choose to let in. Guard that gate. The butterflies on the other side are worth it."
+    "title": "Whenever you get angry, you lose something of your own — be it wisdom, time, or peace.",
+    "image": "https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=1200&q=80&auto=format&fit=crop",
+    "body": "Anger always takes more from us than it gives. The moment we let it take hold, something quietly slips away — our clarity, our composure, a moment we cannot get back.\n\nEach time we lose our temper, we hand over control to something outside ourselves. The words said in anger, the decisions made in haste, the relationships strained by a flare of emotion — these are the real costs, often invisible until long after the anger has passed.\n\nTrue strength is not the ability to express anger loudly. It is the ability to hold your peace when everything around you pushes you to lose it. That composure — earned slowly, tested often — is one of the most valuable things you own. Guard it well."
   }
 ]
